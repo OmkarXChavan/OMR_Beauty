@@ -1,0 +1,218 @@
+/* ============================
+   Breakpoints (PX Only)
+============================ */
+
+/*
+Mobile:   0px   – 599px
+Tablet:   600px – 1023px
+Desktop:  1024px+
+*/
+
+/* -------- Mobile (Default) -------- */
+
+.container {
+  padding: 0 16px;
+}
+
+.section {
+  padding: 16px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* -------- Tablet (600px+) -------- */
+
+@media (min-width: 600px) {
+
+  .container {
+    padding: 0 24px;
+  }
+
+  .section {
+    padding: 24px 0;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+    .banner-content {
+    padding: 24px;
+  }
+
+}
+
+/* -------- Desktop (1024px+) -------- */
+
+@media (min-width: 1024px) {
+
+  .container {
+    max-width: 1600px;
+    padding: 0 32px;
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  
+    .banner-content {
+    padding: 24px;
+  }
+
+}
+
+
+/* ============================
+   Fonts
+============================ */
+
+/* Akzidenz Grotesk */
+
+@font-face {
+  font-family: "Akzidenz Grotesk";
+  src: url("fonts/Akzidenz-GroteskLight.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Akzidenz Grotesk";
+  src: url("fonts/Akzidenz-GroteskRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Akzidenz Grotesk";
+  src: url("fonts/Akzidenz-GroteskMedium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Akzidenz Grotesk";
+  src: url("fonts/Akzidenz-GroteskBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Akzidenz Grotesk";
+  src: url("fonts/Akzidenz-GroteskLightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Akzidenz Grotesk";
+  src: url("fonts/Akzidenz-GroteskMediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+/* GT Standard (Secondary Font) */
+
+@font-face {
+  font-family: "GT Standard";
+  src: url("fonts/GTStandard-MRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* ============================
+   Design System - Colors
+============================ */
+
+:root {
+/* Typography */
+--font-primary: "Akzidenz Grotesk", system-ui, sans-serif;
+--font-secondary: "GT Standard", system-ui, sans-serif;
+
+  /* Brand */
+  --primary: #CABBCF;
+  --primary-dark: #5D4480;
+  --primary-light: #F0E8EE;
+
+  --secondary: #CCBFFF;
+  --secondary-dark: #5137B7;
+  --secondary-light: #F0ECFF;
+
+  /* Accent */
+  --accent: #FF0000;
+
+  /* Neutrals */
+  --black: #000000;
+  --gray-dark: #4D4D4D;
+  --gray: #7F7F7F;
+  --gray-light: #CBCBCB;
+  --gray-lighter: #F2F2F2;
+  --white: #FFFFFF;
+
+  /* Background & Text */
+  --bg: #FFFFFF;
+  --text: #000000;
+  --text-muted: #747474;
+}
+
+/* ============================
+   Base Reset
+============================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+
+/* ============================
+   Color Utilities
+============================ */
+
+.text-primary { color: var(--primary-dark); }
+.text-secondary { color: var(--secondary-dark); }
+.text-muted { color: var(--text-muted); }
+
+.bg-primary { background: var(--primary); }
+.bg-secondary { background: var(--secondary); }
+.bg-light { background: var(--gray-lighter); }
+
+/* ============================
+   Layout
+============================ */
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
