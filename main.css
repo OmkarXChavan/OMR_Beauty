@@ -80,7 +80,7 @@ Desktop:  1024px+
 
 @font-face {
   font-family: "Akzidenz Grotesk";
-  src: url("fonts/Akzidenz-GroteskLight.woff2") format("woff2");
+  src: url("Fonts/Akzidenz-GroteskLight.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -88,7 +88,7 @@ Desktop:  1024px+
 
 @font-face {
   font-family: "Akzidenz Grotesk";
-  src: url("fonts/Akzidenz-GroteskRegular.woff2") format("woff2");
+  src: url("Fonts/Akzidenz-GroteskRegular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -96,7 +96,7 @@ Desktop:  1024px+
 
 @font-face {
   font-family: "Akzidenz Grotesk";
-  src: url("fonts/Akzidenz-GroteskMedium.woff2") format("woff2");
+  src: url("Fonts/Akzidenz-GroteskMedium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -104,7 +104,7 @@ Desktop:  1024px+
 
 @font-face {
   font-family: "Akzidenz Grotesk";
-  src: url("fonts/Akzidenz-GroteskBold.woff2") format("woff2");
+  src: url("Fonts/Akzidenz-GroteskBold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -112,7 +112,7 @@ Desktop:  1024px+
 
 @font-face {
   font-family: "Akzidenz Grotesk";
-  src: url("fonts/Akzidenz-GroteskLightItalic.woff2") format("woff2");
+  src: url("Fonts/Akzidenz-GroteskLightItalic.woff2") format("woff2");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -120,7 +120,7 @@ Desktop:  1024px+
 
 @font-face {
   font-family: "Akzidenz Grotesk";
-  src: url("fonts/Akzidenz-GroteskMediumItalic.woff2") format("woff2");
+  src: url("Fonts/Akzidenz-GroteskMediumItalic.woff2") format("woff2");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
