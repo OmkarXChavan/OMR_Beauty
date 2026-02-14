@@ -1,0 +1,97 @@
+/* ============================
+   Banner Grid
+============================ */
+
+.banner-grid-small {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .banner-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .banner-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================
+   Banner Item
+============================ */
+
+.banner-item-small {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  cursor: pointer;
+}
+
+/* Image */
+
+.banner-item-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.banner-item-small:hover img {
+  transform: scale(1.05);
+}
+
+/* ============================
+   Sliding Content Block
+============================ */
+
+.banner-content-small {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 24px;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+
+
+  /* Show only title area by default */
+  transform: translateY(calc(100% - 80px));
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover → slide fully up */
+
+.banner-item-small:hover .banner-content-small {
+  transform: translateY(0);
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+/* ============================
+   Text Styling
+============================ */
+
+.banner-title-small {
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 16px;
+}
+
+.banner-desc-small {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.banner-more-small {
+  font-size: 14px;
+  text-decoration: underline;
+  color: white;
+}
