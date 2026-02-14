@@ -316,7 +316,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 
@@ -326,6 +326,8 @@
   font-size: 40px;
   font-weight: 500;
   margin: 0;
+  line-height: 48px;
+  text-transform: uppercase;
 }
 
 
@@ -336,6 +338,8 @@
   font-weight: 500;
   color: var(--text);
   text-decoration: underline;
+  text-transform: lowercase;
+  flex-shrink: 0;
 }
 
 
@@ -458,6 +462,86 @@
 
   .collection-title {
     font-size: 64px;
+    line-height: 68px;
   }
 
+}
+
+
+/* ============================
+   New Products Section
+============================ */
+
+.new-section {
+  width: 100%;
+}
+
+.new-container {
+  padding: 24px 16px;
+}
+
+/* Horizontal scroll */
+
+.new-track {
+  display: flex;
+  gap: 16px;
+
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.new-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cards */
+
+.new-card {
+  flex: 0 0 calc((100% - 32px) / 3);
+}
+
+/* Image Wrapper */
+
+.new-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--gray-lighter);
+}
+
+/* Both images stacked */
+
+.new-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: opacity 0.4s ease;
+}
+
+/* Default visible */
+.img-default {
+  opacity: 1;
+}
+
+/* Hover hidden by default */
+.img-hover {
+  opacity: 0;
+}
+
+/* Hover effect */
+.new-card:hover .img-default {
+  opacity: 0;
+}
+
+.new-card:hover .img-hover {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .new-card {
+    flex: 0 0 80%;
+  }
 }
