@@ -1,0 +1,150 @@
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 48px 24px 24px 24px;
+  margin-top: 48px;
+}
+
+/* SVG */
+.footer-top {
+  margin-bottom: 52px;
+}
+
+.footer-top img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 6 Column Grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+/* Newsletter = 3 columns */
+.footer-newsletter {
+  grid-column: span 3;
+  margin-bottom: 48px;
+}
+
+.newsletter-title {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 16px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  background: var(--white);
+  font-size: 14px;
+}
+
+.newsletter-form button {
+  padding: 12px 20px;
+  border: none;
+  background: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Spacer fills remaining 3 columns */
+.footer-spacer {
+  grid-column: span 3;
+}
+
+/* Description = 3 columns */
+.footer-description {
+  grid-column: span 3;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Footer Columns = 1 column each */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-col h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.footer-col a {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-newsletter,
+  .footer-spacer,
+  .footer-description {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-newsletter,
+  .footer-spacer,
+  .footer-description {
+    grid-column: span 1;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+}
+
+.footer-legal {
+  grid-column: 1 / -1;   /* spans full grid width */
+
+  margin-top: 48px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 16px;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.footer a,
+.footer a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
